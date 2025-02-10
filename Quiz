@@ -1,0 +1,53 @@
+#include <iostream>
+using namespace std;
+
+
+//declartion: name, parameters (), return type (in front)
+float pyramidVolume(int length, int width, int height);
+
+bool isPotato(string word);
+
+void Hichew();
+
+
+
+
+
+int main() {
+	//call
+	cout << pyramidVolume(3, 4, 5);
+	cout << isPotato("potato");
+	cout << Hichew();
+
+
+
+
+
+
+}
+
+
+//definition: tells the function purpose
+float pyramidVolume(int length, int width, int height) {
+	return (length* width* height) / 3;
+}
+
+bool isPotato(string word) {
+	if (word == "potato") //Char take a single quote, strings take double
+		return true;
+	else
+		return false;
+}
+
+
+void Hichew() {
+	int num = rand() % 100;
+	if (num < 25)
+		cout << "You got a kiwi!" << endl;
+	else if (num < 50)
+		cout << "you got a mango!" << endl;
+	else if (num < 75)
+		cout << "you got a pineapple" << endl;
+	else
+		cout << "You got a dragonfruit!" << endl;
+}
